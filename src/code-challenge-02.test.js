@@ -1,4 +1,4 @@
-import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge } from './code-challenge-02.js';
+import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge, leastToGreatest } from './code-challenge-02.js';
 
 test('Five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -49,8 +49,8 @@ test('people old enough to see The Matrix', () => {
     ]); // assert
 });
 
-// test('Least to greatest', () => {
-//   const input = [3, 6, 8, 2]; // arrange
-//   const output = fiveAndGreaterOnly(input); // act
-//   expect(output).toEqual([6, 8]); // assert
-// });
+test('Least to greatest', () => {
+  const input = [1, 3, 5, 2, 90, 20]; // arrange
+  const output = leastToGreatest(input); // act
+  expect(output).toEqual([1, 2, 3, 5, 20, 90]); // assert
+});
