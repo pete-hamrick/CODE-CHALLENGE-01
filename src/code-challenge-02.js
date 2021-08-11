@@ -35,3 +35,7 @@ export function lengthSort(arr){
         return a.length - b.length
     })
 }
+
+export function alphabetical(arr){
+    return arr.sort();
+}
