@@ -39,3 +39,9 @@ export function lengthSort(arr){
 export function alphabetical(arr){
     return arr.sort();
 }
+
+export function byAge(arr){
+    return arr.sort(function(a, b) {
+        return a.age-b.age
+    })
+}
