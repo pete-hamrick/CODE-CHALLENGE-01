@@ -1,4 +1,7 @@
 export function fiveAndGreaterOnly(arr){
-    const fivePlus = arr.filter(num => num >= 5);
-    return fivePlus;
+    return arr.filter(num => num >= 5);
+}
+
+export function evensOnly(arr) {
+    return arr.filter(num => num % 2 === 0)
 }
