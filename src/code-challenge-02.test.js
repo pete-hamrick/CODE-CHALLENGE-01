@@ -1,4 +1,4 @@
-import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge, leastToGreatest, greatestToLeast } from './code-challenge-02.js';
+import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge, leastToGreatest, greatestToLeast, lengthSort } from './code-challenge-02.js';
 
 test('Five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -60,3 +60,15 @@ test('Greatest to least', () => {
   const output = greatestToLeast(input); // act
   expect(output).toEqual([90, 20, 5, 3, 2, 1]); // assert
 });
+
+test('shortest word to longest', () => {
+  const input = ['dog', 'wolf', 'by', 'family', 'eaten']	; // arrange
+  const output = lengthSort(input); // act
+  expect(output).toEqual(['by', 'dog', 'wolf', 'eaten', 'family']); // assert
+});
+
+// test('alphabetical sort', () => {
+//   const input = ['dog', 'wolf', 'by', 'family', 'eaten']	; // arrange
+//   const output = lengthSort(input); // act
+//   expect(output).toEqual(['by', 'dog', 'wolf', 'eaten', 'family']); // assert
+// });
