@@ -4,5 +4,8 @@ export function capitalizeObjectKeys(obj){
 }
 
 export function sortedKeys(obj) {
-
+    const arr = Object.keys(obj);
+    return arr.sort(function(a, b) {
+        return a.length - b.length;
+    })
 }
