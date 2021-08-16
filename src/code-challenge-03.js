@@ -11,5 +11,6 @@ export function sortedKeys(obj) {
 }
 
 export function getFilteredKey(obj) {
-
+    const arr = Object.keys(obj);
+    return arr.filter(word => word === 'age')
 }
