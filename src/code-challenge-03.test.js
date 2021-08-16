@@ -1,4 +1,4 @@
-import { capitalizeObjectKeys, sortedKeys } from './code-challenge-03.js';
+import { capitalizeObjectKeys, getFilteredKey, sortedKeys } from './code-challenge-03.js';
 
 test('it capitalizes the keys', () => {
   const dataObject = { name: 'Angelina Jolie', age: 80 }; //arrange
@@ -10,4 +10,10 @@ test('it sorts the keys by shortest to longest', () => {
   const dataObject = { name: 'Spot', age: 3, isDog: true, friends: ['Rover', 'Steve', 'Fluffy'] }; //arrange
   const output = sortedKeys(dataObject); //act
   expect(output).toEqual(['age', 'name', 'isDog', 'friends']); //assert
+});
+
+test('filters out the age key', () => {
+  const dataObject = { name: 'Angelina Jolie', isSpot: false, age: 80, }; //arrange
+  const output = getFilteredKey(dataObject); //act
+  expect(output).toEqual(['age']); //assert
 });

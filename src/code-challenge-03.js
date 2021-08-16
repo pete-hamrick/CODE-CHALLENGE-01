@@ -9,3 +9,7 @@ export function sortedKeys(obj) {
         return a.length - b.length;
     })
 }
+
+export function getFilteredKey(obj) {
+
+}
