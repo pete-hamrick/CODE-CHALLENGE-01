@@ -16,5 +16,5 @@ export function getFilteredKey(obj) {
 }
 
 export function getArrayOfKeysAndValues(obj){
-    
+    return Object.entries(obj)
 }
