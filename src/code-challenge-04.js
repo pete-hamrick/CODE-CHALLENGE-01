@@ -18,7 +18,12 @@ export function totalCharacters(arr) {
     return names.length + spouse.length + kids.length
 }
 
-// export function hasChildrenEntries(arr, character) {
-//     const array = Object.entries(arr);
-
-// } 
+export function hasChildrenEntries(arr, character) {
+    const array = Object.entries(arr)
+    const mapped = array.map(p => p.name)
+    // if (array.map(item => item.name) === character ){
+    //     return true
+    // }
+    console.log(mapped, character)
+    
+} 
