@@ -14,7 +14,6 @@ export function totalCharacters(arr) {
     const spouse = (Object.values(arr).map(item => item.spouse)).filter(function (thing) {return thing != null;})
     const children = (Object.values(arr).map(item => item.children))
     const kids = children.flat(1)
-    console.log(names.length + spouse.length + kids.length)
     return names.length + spouse.length + kids.length
 }
 
@@ -25,10 +24,16 @@ export function hasChildrenEntries(arr, character) {
                 charObj = item
             }            
     })        
-    console.log(charObj)
     if (charObj['children'].length){
         return true
     } else {
         return false
     }
+} 
+
+export function sortByChildren(arr){
+    const sorted = arr.sort((a, b) => {
+        return a.children.length - b.children.length
+    })
+    return sorted
 } 
