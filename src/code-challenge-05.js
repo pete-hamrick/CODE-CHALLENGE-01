@@ -14,5 +14,10 @@ export function listFoods(recipe){
   return recipe.ingredients.map(item => {
       return item.split(' ').slice(2).join(' ')
   })
+}
 
+export function stepActions(recipe){
+  return recipe.steps.map(item => {
+    return item.split(' ')[0]
+  })
 }
