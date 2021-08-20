@@ -1,4 +1,5 @@
 import { getHouses, hasChildrenEntries, sortByChildren, totalCharacters, updateNumbers } from './code-challenge-04.js';
+
 test('it gets the names of the houses', () => {
   const characters = [
     {
