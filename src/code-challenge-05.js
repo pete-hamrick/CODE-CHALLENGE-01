@@ -31,3 +31,8 @@ export function removeLastCharacters(str, numberOfCharacters){
     }
     return str.slice(0, -numberOfCharacters)
 }
+
+export function totalSumCSV(str){
+  let splits = str.split(',');
+  return splits.map(item => Number(item)).reduce((a, b) => a + b)
+}

@@ -1,4 +1,4 @@
-import { howMuchPencil, listFoods, removeLastCharacters, stepActions, wordsToCharList } from './code-challenge-05';
+import { howMuchPencil, listFoods, removeLastCharacters, stepActions, totalSumCSV, wordsToCharList } from './code-challenge-05';
 
  test('It should return a list of shortening words', () => {
     expect(howMuchPencil('Welcome')).toStrictEqual(['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', '']);
@@ -77,7 +77,7 @@ import { howMuchPencil, listFoods, removeLastCharacters, stepActions, wordsToCha
   });
 
 
-    test('removes last characters', () => {
+  test('removes last characters', () => {
     expect(removeLastCharacters('Gregor', 2)).toStrictEqual('Greg');
     expect(removeLastCharacters('hello', -1	)).toStrictEqual('hello');
     expect(removeLastCharacters('wowow', -700)).toStrictEqual('wowow');
@@ -85,3 +85,8 @@ import { howMuchPencil, listFoods, removeLastCharacters, stepActions, wordsToCha
     expect(removeLastCharacters('', 1)).toStrictEqual('');
     expect(removeLastCharacters('a', 1)).toStrictEqual('');
   });
+
+  test('adds all the values', () => {
+    expect(totalSumCSV('1,4,5,7,2')).toEqual(19);
+    expect(totalSumCSV('147')).toEqual(147);
+  })
