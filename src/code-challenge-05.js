@@ -5,3 +5,7 @@ export function howMuchPencil(str) {
     }
     return pencil
 }
+
+export function wordsToCharList(str) {
+    return str.split('');
+}
