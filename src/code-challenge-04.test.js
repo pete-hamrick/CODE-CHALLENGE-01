@@ -151,5 +151,7 @@ test('does the character have children?', () => {
     }
   ]; //arrange
   const output = hasChildrenEntries(characters, character1); //act
+  const output2 = hasChildrenEntries(characters, character2); //act
   expect(output).toEqual(true); //assert
+  expect(output2).toEqual(false); //assert
 });

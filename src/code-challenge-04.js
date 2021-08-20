@@ -19,11 +19,16 @@ export function totalCharacters(arr) {
 }
 
 export function hasChildrenEntries(arr, character) {
-    const array = Object.entries(arr)
-    const mapped = array.map(p => p.name)
-    // if (array.map(item => item.name) === character ){
-    //     return true
-    // }
-    console.log(mapped, character)
-    
+    let charObj; 
+    arr.forEach(item => {
+            if (item.name === character){
+                charObj = item
+            }            
+    })        
+    console.log(charObj)
+    if (charObj['children'].length){
+        return true
+    } else {
+        return false
+    }
 } 
