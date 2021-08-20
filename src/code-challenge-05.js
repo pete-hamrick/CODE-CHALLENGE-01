@@ -36,3 +36,7 @@ export function totalSumCSV(str){
   let splits = str.split(',');
   return splits.map(item => Number(item)).reduce((a, b) => a + b)
 }
+
+export function removeVowels(str){
+  return str.replaceAll('a', '').replaceAll('e', '').replaceAll('i', '').replaceAll('o', '').replaceAll('u', '')
+}
