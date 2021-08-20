@@ -9,3 +9,10 @@ export function howMuchPencil(str) {
 export function wordsToCharList(str) {
     return str.split('');
 }
+
+export function listFoods(recipe){
+  return recipe.ingredients.map(item => {
+      return item.split(' ').slice(2).join(' ')
+  })
+
+}
