@@ -1,4 +1,4 @@
-import { howMuchPencil, listFoods, stepActions, wordsToCharList } from './code-challenge-05';
+import { howMuchPencil, listFoods, removeLastCharacters, stepActions, wordsToCharList } from './code-challenge-05';
 
  test('It should return a list of shortening words', () => {
     expect(howMuchPencil('Welcome')).toStrictEqual(['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', '']);
@@ -74,4 +74,14 @@ import { howMuchPencil, listFoods, stepActions, wordsToCharList } from './code-c
     ]
 }; 
     expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
+  });
+
+
+    test('removes last characters', () => {
+    expect(removeLastCharacters('Gregor', 2)).toStrictEqual('Greg');
+    expect(removeLastCharacters('hello', -1	)).toStrictEqual('hello');
+    expect(removeLastCharacters('wowow', -700)).toStrictEqual('wowow');
+    expect(removeLastCharacters('hello', 12)).toStrictEqual('');
+    expect(removeLastCharacters('', 1)).toStrictEqual('');
+    expect(removeLastCharacters('a', 1)).toStrictEqual('');
   });

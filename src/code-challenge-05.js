@@ -21,3 +21,13 @@ export function stepActions(recipe){
     return item.split(' ')[0]
   })
 }
+
+export function removeLastCharacters(str, numberOfCharacters){
+    if (numberOfCharacters <= 0){
+      return str
+    }
+    if (numberOfCharacters > str.length){
+        return ''
+    }
+    return str.slice(0, -numberOfCharacters)
+}
