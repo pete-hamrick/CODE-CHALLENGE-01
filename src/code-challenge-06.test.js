@@ -9,7 +9,7 @@ import { findMax, returnTen, totalSum } from './code-challenge-06';
       expect(findMax([[13,24,24,2], [2,5,6], [2,3]])).toEqual(24)
   })
   
-  test.skip('returns the total sum from a matrix', () => {
+  test('returns the total sum from a matrix', () => {
       expect(totalSum([[13,24,24,2], [2,5,6], [2,3]])).toEqual(81)
       expect(totalSum([])).toEqual(0)
   })
