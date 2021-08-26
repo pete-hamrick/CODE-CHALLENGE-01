@@ -1,4 +1,4 @@
-import { findMax, grandTotal, returnTen, totalSum } from './code-challenge-06';
+import { findMax, grandTotal, returnTen, totalSum, salesData } from './code-challenge-06';
 
   test('it should return the last 10 characters of a string as an array', () => {
     expect(returnTen('hello world')).toStrictEqual(['e','l','l','o',' ','w','o','r','l','d']);
