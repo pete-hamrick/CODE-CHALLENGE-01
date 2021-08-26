@@ -22,11 +22,14 @@ export function containsWorld(input) {
 
 export function isCapitalized(str){
     let re = /[A-Z][a-z]+/g 
-    //needs some conditional to return [] if no cap letters
     let arr = str.match(re)
     if (arr === null){
         return []
     } else if (arr.length > 0) {
         return arr
     }
+}
+
+export function citiesAtoJ(arr) {
+    
 }

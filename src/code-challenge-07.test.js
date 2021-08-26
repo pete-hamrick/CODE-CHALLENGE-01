@@ -1,4 +1,4 @@
-import { sortByChildren, containsW, isNum, isCapitalized } from './code-challenge-07.js';
+import { sortByChildren, containsW, isNum, isCapitalized, citiesAtoJ } from './code-challenge-07.js';
 
 describe('Testing challenge 1', () => {
   test('It should sort the characters by number of children', () => {
@@ -83,5 +83,13 @@ describe('Testing challenge 5', () => {
     expect(isCapitalized('We only want to Return the Words that begin With a capital Letter')).toEqual(	[ 'We', 'Return', 'Words', 'With', 'Letter' ]);
     expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']);
     expect(isCapitalized('these words are all failures')).toEqual([]);
+  });
+});
+
+describe('Testing challenge 6', () => {
+  test.skip('It should return a new array containing any cities that begin with the letters A through J', () => {
+    expect(citiesAtoJ(['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'])).toEqual(	[ 'Cleveland', 'Birmingham', 'Austin', 'Boston', 'Hoboken' ]);
+    expect(citiesAtoJ(['Albuquerque', 'Chicago', 'Philadelphia', 'Newark', 'Sacramento', 'Eugene'])).toEqual(['Albuquerque', 'Chicago', 'Eugene']);
+    expect(citiesAtoJ([])).toEqual([]);
   });
 });
